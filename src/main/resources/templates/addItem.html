@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Item</title>
+</head>
+<body>
+<form action="/items/add" method="post" enctype="multipart/form-data">
+    Title:
+    <input type="text" name="title"><br><br>
+    Description:
+    <textarea name="description"></textarea>
+    <select name="category.id">
+        <option th:each="category:${categories}"
+        th:text="${category.name}" th:value="${category.id}"></option>
+    </select>
+<input type="file" name="image">
+    <input type="submit" value="create">
+</form>
+</body>
+</html>
