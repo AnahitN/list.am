@@ -32,7 +32,7 @@ public class ItemController {
 @Value("${listam.upload.image.path}")
     private String imageUploadPath;
 
-    @GetMapping
+    @GetMapping()
     public String itemsPage(ModelMap modelMap) {
         List<Item> all = itemRepository.findAll();
         modelMap.addAttribute("items", all);

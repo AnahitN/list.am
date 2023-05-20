@@ -17,7 +17,8 @@ public class Comment {
     private Date commentDate;
     @Column(name = "comment")
     private String commentText;
-
+    @ManyToOne
+    private User user;
 
 
 }
